@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diamond CMS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <!--powyżej i poniżej łącza do ściągniętego slicka -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0ec460f632.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- w tej podstronie tak naprawdę zmieniamy prawą czesc  widoku -->
+
+    <div class="panel">
+        <div class="row m-0 h-100">
+            <div class="col-2 p-0 px-4 panel-left">
+                <section class="date-box">
+                    <p class="day mb-0">Środa</p>
+                    <p class="time mb-0">12:00</p>
+                    <p class="date mb-0 text-muted">21/02/2021</p>
+                </section>
+                <section class="menu text-center">
+                    <a href="index.html">
+                        <div class="menu-item">
+                            <i class="fas fa-sliders-h"></i>
+                            <p>strona główna</p>
+                        </div>
+                    </a>
+                    <a href="#" class="active">
+                        <div class="menu-item">
+                            <i class="far fa-comments"></i>
+                            <p>posty</p>
+                        </div>
+                    </a>
+                    <a href="users.html">
+                        <div class="menu-item">
+                            <i class="fas fa-user-friends"></i>
+                            <p>użytkownicy</p>
+                        </div>
+                    </a>
+                </section>
+                <section class="info-box text-light text-center mt-3">
+                    <h3>Diamond CMS</h3>
+                    <p class="text-muted">&copy; Copyright 2021</p>
+                </section>
+            </div>
+            <!--od tego miejsca jest nowa czesc tj. prawa strona widoku --------------------------------------- -->
+            <div class="col-10 p-0 panel-right text-light text-center posts">
+                <!--wewnętrzna nasza klasa posts dzięki której bedziemy stylować tą część  -->
+
+                <section class="info-top my-4 pt-5">
+                    <!-- sekcja nagłówna podstrony -->
+                    <h1>posty</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, sint corporis? Impedit!</p>
+                </section>
+
+                <section class="py-5">
+                    <!-- sekcja  wyróżnionych postow i karuzeli ze slicka.js -->
+                    <h3 class="mb-4">wyróżnione posty</h3>
+                    <div class="container">
+                        <div class="mleko">
+                            <!--to nasza klasa do użycia karuzeli ze slicka a wewnątrz tedo diva jest div dla jednej karty z karuzeli ( będziemy go później duplikować ) a w jego wnętzru  zawartosć  takiej karty i button  typu btn z wyskakującym popupem!!!  -->
+                            <div class="card bg-transparent m-3 p-3 border-white featured-post">
+                                <!-- div tła kart, obwódki, -->
+                                <div class="card-body">
+                                    <!-- w/w div jednej karty - ciało karty -->
+                                    <p class="card-title mb-0">Temat:</p>
+                                    <p class="text-muted">#nazwa-tematu</p>
+                                    <p class="card-text"><strong>Treść:</strong>Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Tempora voluptatum quo accusantium.</p>
+                                    <!--poniżej a z buttonem  btn i wyskakujacym popupem a wszystko to z Bootstrapa, ten popup - modal jest dodany do buttona on jest w Bootstrapie w components/modal i z prawej strony wybraliśmy  ten Vertical centered aby otwierał sie nie na górze a na środku strony -->
+                                    <a href="#" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">Zobacz post</a>
+                                    <!-- wewnetrzne atrybuty data - toggle i data - target są konieczne i  skopiowane z Boota z w/w popupa i wklejone do naszego buttona !!!!!!!!!-->
+                                </div>
+                            </div>
+                            <div class="card bg-transparent m-3 p-3 border-white featured-post">
+                                <div class="card-body">
+                                    <p class="card-title mb-0">Temat:</p>
+                                    <p class="text-muted">#nazwa-tematu</p>
+                                    <p class="card-text"><strong>Treść:</strong>Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Tempora voluptatum quo accusantium.</p>
+                                    <a href="#" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">Zobacz post</a>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent m-3 p-3 border-white featured-post">
+                                <div class="card-body">
+                                    <p class="card-title mb-0">Temat:</p>
+                                    <p class="text-muted">#nazwa-tematu</p>
+                                    <p class="card-text"><strong>Treść:</strong>Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Tempora voluptatum quo accusantium.</p>
+                                    <a href="#" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">Zobacz post</a>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent m-3 p-3 border-white featured-post">
+                                <div class="card-body">
+                                    <p class="card-title mb-0">Temat:</p>
+                                    <p class="text-muted">#nazwa-tematu</p>
+                                    <p class="card-text"><strong>Treść:</strong>Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Tempora voluptatum quo accusantium.</p>
+                                    <a href="#" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">Zobacz post</a>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent m-3 p-3 border-white featured-post">
+                                <div class="card-body">
+                                    <p class="card-title mb-0">Temat:</p>
+                                    <p class="text-muted">#nazwa-tematu</p>
+                                    <p class="card-text"><strong>Treść:</strong>Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Tempora voluptatum quo accusantium.</p>
+                                    <a href="#" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">Zobacz post</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tu jest sekcja użytkowników ze zdjęciemi aktywnych  użytkowników. -->
+                <section class="active-users py-5">
+                    <h3 class="mb-4">najaktywniejsi użytkownicy</h3>
+                    <div class="container">
+                        <div class="card-deck">
+                            <!-- card dek ( jakozbiorczy deck dla wielu kart ) jest z Boota jak już poprzednio w innych projektach było stosowane!!!!!!, -->
+                            <div class="card bg-transparent">
+                                <!-- div dla jednej karty a wewnatrz div na zdjęcie i samozdjęcie w nim, div card-body  na text i przycisk !!! - to jest struktura jednej karty -->
+                                <div class="card-img">
+                                    <img src="img/building-2665811_640.jpg" class="card-img-top" alt="lorem ipsum">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <!-- justify -content-between jest użyta aby była wolna przestrzeń między przyciskiem a textem i te elementy były przyklejone do krawędzi !!!!!! i to dajemy na rodzicu tych elementów !!!!!!!! bo elementem jest p nazwa użytkownika i butto btn.  -->
+                                    <p>#nazwa-użytkownika</p>
+                                    <button class="btn btn-outline-light">Pokaż profil</button>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent">
+                                <div class="card-img">
+                                    <img src="img/beautiful-2576845_640.jpg" class="card-img-top" alt="lorem ipsum">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <p>#nazwa-użytkownika</p>
+                                    <button class="btn btn-outline-light">Pokaż profil</button>
+                                </div>
+                            </div>
+                            <div class="card bg-transparent">
+                                <div class="card-img">
+                                    <img src="img/from-the-sky-fall-2036457_640.jpg" class="card-img-top"
+                                        alt="lorem ipsum">
+                                </div>
+                                <div class="card-body d-flex justify-content-between">
+                                    <p>#nazwa-użytkownika</p>
+                                    <button class="btn btn-outline-light">Pokaż profil</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- teraz sekcja  wyszukiwarki  ---------------------------------------------------------------------------->
+                <section class="find-post border-top pt-5">
+                    <!-- z uzyciem borer-top - to ta linia oddialajaca sekcję na widoku, -->
+                    <h3>Znajdź post</h3>
+                    <p class="mb-4">Wybierz kategorię, wpisz tekst i wciśnij przycisk "Szukaj".</p>
+                    <div class="container">
+                        <!-- kontener a wewnątrz z inputem  do wyszukiwarki -->
+                        <div class="input-group mb-3">
+                            <!-- klasa Boota do inputa !!!!!-->
+                            <div class="input-group-prepend dropup">
+                                <!-- div dla buttona i textów z dropupa - dajemy drop up do góry bo na dół chował by się za widok ogólnego kontenera !!!!!!!!!!!! button i  jego menu musi być rodzeństwem w divie input-group-prepend dropup!!!!! aby były obok siebie na całej szerokości widoku,  -->
+                                <button class="btn btn-outline-info dropdown-toggle" type="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Szukaj
+                                    po...</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Nazwie użytkownika</a>
+                                    <a class="dropdown-item" href="#">Nazwie tematu</a>
+                                    <a class="dropdown-item" href="#">Słowach kluczowych</a>
+                                </div>
+                            </div>
+                            <!-- a input  do wpisywania i button szukaj są rodzeństwem razem z divem zawierajacym butto drodowna o jego menu !!!!!!!!!!!!!! Te trzy elementy są ze sobą rodzeństwem i dlatego dzielą sie wspólną całkowitą przestrzenią w divie rodzicu tj. div input-group !!!!!!!!!!!! -->
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <button class="btn btn-outline-light px-4">Szukaj</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- poniżej to jest wyskakujacy na srodku modal - popup i nie musimy go nigdzie  umieszzcac w postach tam gdzie jest jego przycisk ale on będzie polączony z tym przyciskiem wyżej w karcie postu przez atrybuty z tego przycisku tj. data-toggle="modal" i  data-target="#exampleModalCenter"!!!!!!!!!!!!!!!, modal popup  jest wklejony tuż powyżej naszych skryptów jsowych -   to jest modal - vertocal -center skopiowanyz Boota, -->
+    <div class="modal fade posts-modal" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- tu się zaczyna zawartośc naszego modala a w tym divie  trzy divy  tj. modal-heder, modal-body i modal-footer!!!!!!!!!!!!! -->
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <h3>Temat:</h3>
+                    <p>Nazwa tematu</p>
+                    <h3>Treść:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut atque tenetur suscipit!</p>
+                    <h3>Opcje:</h3>
+                    <div>
+                        <!-- dodatkowy div z zawartością trzech przycisków !!!!!!!!!!!! przez nas dodanych -->
+                        <button class="btn btn-outline-success"><i class="far fa-edit mr-2"></i> edytuj</button>
+                        <button class="btn btn-outline-danger"><i class="far fa-trash-alt mr-2"></i> usuń</button>
+                        <button class="btn btn-outline-info"><i class="fas fa-link mr-2"></i> pokaż w temacie</button>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                    <button type="button" class="btn btn-primary">Zapisz zmiany</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- powyżej i poniżej to jsy do karuzeli ze slicka a poniżej to jest inicjalizacja slicka (slick/usage i tam w/g wzoru kopiować linie implementacji do swojej strony, przy użyciu Boota nie trzeba kopiowac linków do jQuer bo Boot już ją ma  i wówzcas tylko kopiujemy jedną linijkę  a jak mamy projekt bez Boota to kopiujemy wszystkoentrzy linijki, ) !!!!!!!!-->
+    <script>
+        $(document).ready(function () {
+            $('.mleko').slick({ /*oryginalna klassa  ze slicka  zamieniona na nazwę naszej klasy tj. .post-carousel aby slick przeszukiwał nasz div a nie ten z oryginału - bo nie mamy  diva o takiej nazwie klasy jak w ryginale  :-) */
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+
+</body>
+
+</html>

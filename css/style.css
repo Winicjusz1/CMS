@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; /* podstawowy reset */ 
+}
+
+html {
+    font-size: 62.5%; /* text na 10 px */ 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh; /* 100% wysokości przeglądarki !!!!!!*/ 
+    font-family: 'Montserrat', sans-serif;
+    background-color: #181D23;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, .2);/* klasa ogólna - przycis na którym jesteśmy - tj. strona jest lekko pobielała */ 
+}
+
+.panel {
+    width: 1450px;
+    height: 1000px;
+    margin: 30px 0px;
+    border: 1px solid #4B5769;
+    border-radius: 15px;
+    overflow: hidden; /* aby nam róg diva wewnętrznego w panelu tj. div panel - left i panel-right,  nie wyciekał po za obrys zbiorczego panelu tylko się schował w nim tj. był zaokrąglony */ 
+}
+
+.panel-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ponieważ mamy ustawione na flex column  to do wyśrodkowania na osi Y  potrzebujemy justify content  a nie align- items !!!!!!!!*/ 
+    background-color: #4B5769;
+}
+
+.panel-right {/* gradient dla panelu prawego */ 
+    background-image: linear-gradient(180deg, rgba(55, 64, 76, 1) 0%, rgba(21, 26, 32, 1) 100%);
+}
+
+.info-top h1 { /* klasa ogólna używana na obu podstronach do stylu nagłówka a ponizej do stylu p */ 
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.info-top p {
+    font-size: 1.6rem;
+}
+
+/* ------------------------ */
+.date-box { /*flex aby jego dzieci były elastyczne , column aby były w pionie justify na center aby były wyśrodkowane na osi  Y, i align-items na center  tj.  centrowanie na osi X bo jest ogólnie ustawiona oś Y przez flex-direction na column !!!!!!!  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 160px; /* wysokość  tego diva i  kolor textu */ 
+    color: #fff;
+}
+
+.date-box .day { /* wielkości elementów diva date-box oraz to samo niżej */ 
+    font-size: 2rem;
+}
+
+.date-box .time {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.date-box .date {
+    font-size: 1.8rem;
+}
+
+.menu { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* dajemy to  aby była przestrzeń dookoła przycisków !!!!!!!!*/ 
+    align-items: center; /* to wyśrodkowanie na osi X !!!!!! bo jest  układ flex-direction column i wysokość diva na 700px */ 
+    height: 700px;
+}
+
+.menu a { /* poniżej ostylowanie jednego przycisku  z szerokością na 100% i wysokością na 30% rodzica oraz powtórzonym space around a reszta jak wynika z tekstu właściwości */ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.menu a:hover,
+.featured-post:hover,
+.users-list li:hover {/* to jest gradient do hovera*/ 
+    background-image: linear-gradient(160deg, rgba(0, 110, 255, .25) 0%, rgba(9, 255, 0, 0.25) 100%);
+}
+
+.menu-item i { /* stylizacja ikony */ 
+    font-size: 6rem;
+    margin-bottom: .4em;
+}
+
+.menu-item p {/* stylizacja p  - textu pod ikoną */ 
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.info-box h3 {/* stylizacja dolnego info-boxa */
+    font-size: 2rem;
+}
+
+.info-box p {  /* stylizacja p textu w dolnym info-boxie */
+    font-size: 1.6rem;
+}
+
+/* ------------------------ */
+
+.main-stats h1 { /* ostylowanie napisu "glówne statystyki" */ 
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-stat-box { /* ostylowanie  górnych kart z textami */ 
+    height: 140px;
+    border-radius: 15px;
+    transition: background-color .3s; /* to jest wskazanie transition - przejścia hovera tylko dla background-color */ 
+}
+
+.main-stat-box:hover {
+    background-color: rgba(255, 255, 255, .09);/* biały z kanałem przeźroczystości bardzo nisko  */ 
+}
+
+.main-stat-box h3 { /* ostylowanie textu w h3 */  
+    margin-bottom: 1em;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main-stat-box p {
+    font-size: 1.2rem;
+}
+
+/* ------------------------ */
+
+.main-table h3 {
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.main-table .table-dark { /* ustawienie kolorutabeli z Bootstrapa na przeźroczystą aby  posłuśyłą się kolorem tła  !!!!! */ 
+    background-color: transparent;
+}
+
+.main-table thead,
+.main-table .dropdown-item { /* to i po nizej to ustawienie  wielkosci textu w nagłówku tabeli, w tabeli i w przycisku */ 
+    font-size: 1.4rem;
+}
+
+.main-table tbody {
+    font-size: 1.2rem;
+}
+
+.main-table .btn {
+    font-size: 1.6rem;
+}
+
+.page-link { /* ostylowanie paginacji */ 
+    padding: 0.5em 1em;
+    font-size: 1.4rem;
+    background-color: transparent;
+    color: #fff;
+    transition: color .3s, background-color .3s;
+}
+
+.page-link:hover {/* hover dla paginacji */ 
+    color: #ddd;
+    background-color: rgba(255, 255, 255, .15);
+}
+
+/* bok prawy prawej częsci głównej siatki*/
+
+.aside h3 {
+    margin-bottom: 1em;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo .logo-text {
+    font-size: 3.4rem;
+    text-shadow: 0 0 9px #fff;
+}
+
+.logo p {
+    font-size: 1.8rem;
+}
+
+.users-online p,
+.users-gender i {
+    font-size: 4rem;
+}
+
+.users-gender .fa-male {
+    text-shadow: 0 0 10px rgb(9, 255, 0);
+}
+
+.users-gender .fa-female {
+    text-shadow: 0 0 10px rgb(0, 110, 255);
+}
+
+.users-gender p {
+    font-size: 3rem;
+}
+
+.monthly-stats .form-control,
+.monthly-stats option {
+    font-size: 1.6rem;
+}
+
+.monthly-stats .info,
+.featured-post .card-title {
+    font-size: 1.8rem;
+}
+
+.monthly-stats .number,
+.featured-post .card-body {
+    font-size: 1.4rem;
+}
+
+/* podstrona posts */
+
+.posts h3 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.featured-post .btn {
+    font-size: 1.6rem;
+}
+
+.active-users .card-img {
+    overflow: hidden; /* aby obraz nie wyciekał po za ramki diva - rodzica tj. active-users class="cadr-img"  przy powiększeniu na scale z 1 do  1,3 !!!!!!!!*/ 
+}
+
+.active-users img { /* zadanie  wysokości dla zdjęc aby miały jedną wyskokość - były wyrównane object-fit: cover aby dobrze wyglądały w divie, przeźroczystość na 0,6 i animacja przejścia opacity  z przyciemnionego na normalne  0,3s zeby nie było skokowe i animacja transform z hovera tj. powiększenie scali do wartości 1,1 */ 
+    height: 180px;
+    object-fit: cover;
+    opacity: .5;
+    transition: opacity .3s, transform .3s;
+}
+
+.active-users img:hover {/*przycimnienie -  przeźroczystość na 1 aby nie były przyciamnione i powiększenie skali  do 1,1 */ 
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.active-users .card-body,
+.active-users .btn {
+    font-size: 1.5rem;
+}
+
+.find-post, /* ostylowanie szukajki */ 
+.find-post input,
+.find-post .btn,
+.find-post .dropdown-item {
+    font-size: 1.6rem;
+}
+
+.posts-modal h3 { /* modal - tj. wyskakujący centralnie popup w poscie*/ 
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.posts-modal p,
+.posts-modal .btn {
+    font-size: 1.4rem;
+}
+
+.posts-modal .modal-body .btn {
+    text-transform: uppercase;
+}
+
+/* podstrona users */
+
+.users-list li {
+    padding: .5em 1em;
+    margin: 0.2em 0;
+    font-size: 2rem;
+}
+
+.users-list .btn {
+    font-size: 1.6rem;
+}
+
+.users-list .list-group-item {
+    border: 1px solid #fff;
+}
+
+.user-search label,
+.user-search input,
+.user-search select {
+    font-size: 1.6rem;
+}
+
+.user-search .btn {
+    font-size: 2rem;
+}
+
+
+.modal-content h3.card-title { /* ostylowanie modala*/ 
+    font-size: 2.6rem;
+}
+
+.modal-content label,
+.modal-content .newsletter,
+.modal-content select,
+.modal-content input,
+.modal-footer .btn {
+    font-size: 1.6rem;
+}

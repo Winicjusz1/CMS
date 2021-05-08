@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diamond CMS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0ec460f632.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <div class="panel">
+        <div class="row m-0 h-100">
+            <!-- zerujemy auto marginesy  i ustawiamy  wysokosć na 100% swojego rodzica tj. div class="panel"!!!!!!!!!!!!!!!!!!!!!!!!! -->
+            <div class="col-2 p-0 px-4 panel-left">
+                <!-- pading na 0 i padding na oxi X na 4 -->
+                <section class="date-box">
+                    <p class="day mb-0">Środa</p>
+                    <!--marginesy na zero-->
+                    <p class="time mb-0">12:00</p>
+                    <p class="date mb-0 text-muted">21/02/2021</p>
+                </section>
+                <section class="menu text-center">
+                    <!--text center aby był wycentrowany i w tej sekcji a class activ a w nim div menu-item a w tym divie  i z ikoną i p z tekstem. POnizej jeszce dwa razy to samo z ikonami i właściwym tekstem od przycisków   -->
+                    <a href="#" class="active">
+                        <div class="menu-item">
+                            <i class="fas fa-sliders-h"></i>
+                            <p>strona główna</p>
+                        </div>
+                    </a>
+                    <a href="posts.html">
+                        <div class="menu-item">
+                            <i class="far fa-comments"></i>
+                            <p>posty</p>
+                        </div>
+                    </a>
+                    <a href="users.html">
+                        <div class="menu-item">
+                            <i class="fas fa-user-friends"></i>
+                            <p>użytkownicy</p>
+                        </div>
+                    </a>
+                </section>
+                <section class="info-box text-light text-center mt-3">
+                    <!-- dolna sekcja info, text wyśrodkowany, margines 3 stopnia text jasny, a wewnątrz h3 i p  ale bez div ??????????? -->
+                    <h3>Diamond CMS</h3>
+                    <p class="text-muted">&copy; Copyright 2021</p>
+                </section>
+            </div>
+            <!-- ------------------------------------------------------------------------------------------------------ -->
+            <div class="col-10 p-0 panel-right">
+                <!--prawy panel o szerekości 10col padding na zero -->
+
+
+                <div class="row m-0 h-100">
+                    <!--calościowy row dla  całości  layout a w nim dwa zestawy kolumn jak niżej tj. lewy (9col)  i prawy(3col) zestaw kolumn jest w nim  umieszczony -->
+                    <div class="col-9 mt-5">
+                        <!--wewnętrzny div na col 9 margin 5 stopnia  a w nim  section  w ktorej pod gównymi napisami jest kolejny row  a w nim "trzy" kolumny a kazda po 4 col składowe !!!!!!!!!!! W każdej kolumnie  div zbiorczy o swojej nazwie "main-start-box"  z zawartością elementów tj. h3, p,-->
+                        <section class="main-stats py-4 px-5 text-light text-center">
+                            <h1 class="mb-5">główne statystyki</h1>
+                            <div class="row mb-5">
+                                <div class="col-4">
+                                    <div class="main-stat-box p-5 border">
+                                        <h3>postów</h3>
+                                        <p>Łącznie: 4.250.120</p>
+                                        <p>W tym miesiącu: 125.703</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="main-stat-box p-5 border">
+                                        <h3>tematów</h3>
+                                        <p>Łącznie: 1.830.484</p>
+                                        <p>W tym miesiącu: 35.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="main-stat-box p-5 border">
+                                        <h3>użytkowników</h3>
+                                        <p>Łącznie: 750.064</p>
+                                        <p>W tym miesiącu: 8.409</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="chart" class="py-5 text-dark"></div>
+                            <!-- div do umieszczenia wykresu !!!!!!!!!!!!!!!-->
+                        </section>
+
+                        <section class="main-table p-5">
+                            <!--sekcja zawierająca diva z dropdownem w postaci buttona, zdiva z zawartością  samego dropdowna - jego menu, nie diva lecz znacznik table z tabelą, nava z zawartością ul i li  tj. kostki paginacji,  -->
+
+                            <div class="d-flex justify-content-between">
+                                <!--to daje że nagłówek jest po lewej stronie  a dropdown jest po prawej stronie -  w lini nagłówka pod h3 skopiowany jest dropdown z  Bootstrapa ale w tym kodzie zaminiłem btn-secendary na btn-outline-light aby był jasny jak na naszej stronie  -->
+                                <h3 class="mb-3">Ostatnie posty:</h3>
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-light dropdown-toggle" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Sortuj
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Według dat</a>
+                                        <a class="dropdown-item" href="#">Według autora</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-hover table-dark">
+                                <!--tabele w Bootstrapie sa w content a nie w componentach, po skopiowaniu jest kilka modyfikacji - usuwamy colspana i zmieniamy dane na nasze  -->
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Temat</th>
+                                        <th scope="col">Użytkownik</th>
+                                        <th scope="col">Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Lorem, ipsum dolor.</td>
+                                        <td>Otton III</td>
+                                        <td>20/20/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                                        <td>Thornton</td>
+                                        <td>20/20/2020</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Lorem ipsum dolor sit amet.</td>
+                                        <td>Larry King</td>
+                                        <td>20/20/2020</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--paginacja z Bootstrapa z componentów, i dopisana dla wycentrowania na X klasa flexowa justify-content center bo mamy  ustawione na row a nie na column!!!!!!! -->
+                            <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </div>
+
+                    <div class="col-3 p-4 text-light text-center aside">
+                        <!-- prawa część col3, aside to wewnętrzna nasza klasa  -->
+                        <section class="logo py-4">
+                            <!-- skcja górna z logo i napisem -->
+                            <p class="logo-text"><i class="far fa-gem"></i> Diamond</p>
+                            <p>Powerful tool for professionals & cookie lovers.</p>
+                        </section>
+                        <section class="users-online py-5">
+                            <!-- sekcja druga od góry użytkownicy i cyfra pod napisem-->
+                            <h3>użytkownicy online</h3>
+                            <p>47</p>
+                        </section>
+                        <section class="users-gender py-4">
+                            <!-- sekcja trzecia od góry  płeć i wewnętrzne dwa divy po 6 col każdy  z ikonami chlopca i dziewczynki-->
+                            <h3>płeć użytkowników</h3>
+                            <div class="row m-0">
+                                <!--div row z zawartością dwóch divów po 6 kolumn każdy  !!!!!!!!! na w/w ikony -->
+                                <div class="col-6 box">
+                                    <i class="fas fa-male"></i>
+                                    <p>56%</p>
+                                </div>
+                                <div class="col-6 box">
+                                    <i class="fas fa-female"></i>
+                                    <p>44%</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="monthly-stats py-5">
+                            <!-- sekcja  dolna  "Statystyki"-->
+
+                            <h3>statystyki</h3>
+                            <div class="form-group mb-4">
+                                <!--div  z formularzem - to jest klasa z Bootstrapa -->
+                                <select id="inpustState" class="form-control bg-dark text-light">
+                                    <!-- to teżsą klasy Bootstrapowe-->
+                                    <option selected>Styczeń</option>
+                                    <option>Luty</option>
+                                    <option>Marzec</option>
+                                    <option>Kwiecień</option>
+                                    <option>Maj</option>
+                                    <option>Czerwiec</option>
+                                    <option>Lipiec</option>
+                                    <option>Sierpień</option>
+                                    <option>Wrzesień</option>
+                                    <option>Październik</option>
+                                    <option>Listopad</option>
+                                    <option>Grudzień</option>
+                                </select>
+                            </div>
+                            <div class="row m-0">
+                                <!--w row są umieszczone divy po 6col kazdy aby w jednym rzędzie nie było ich więcej niz dwa, następnie jest ich 6 sztuk i dlatego ze jest ich po dwa w rzedzie to kolejne przeskakująpod poprzednie  w dół w wyniku czego mamy dwa rzedy po trzy kostki w każdym rzedzie !!!!!!-->
+                                <div class="col-6 mb-4">
+                                    <p class="info">Posty</p>
+                                    <p class="number text-muted">125.703</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Rejestracje</p>
+                                    <p class="number text-muted">8.409</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Śr. czas - pobyt</p>
+                                    <p class="number text-muted">46min</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Śr. czas - aktywność</p>
+                                    <p class="number text-muted">24min</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Ilość zamówień</p>
+                                    <p class="number text-muted">928</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <p class="info">Ilość reklamacji</p>
+                                    <p class="number text-muted">6</p>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!--js. do wykresu pobrany ze strony Area Charts Examples ApexCahrts.js -->
+    <script>
+        var options = {
+            series: [{
+                name: 'Aktywni użytkownicy',
+                data: [31, 40, 28, 51, 42, 109, 100]
+            }, {
+                name: 'Ilość postów',
+                data: [11, 32, 45, 32, 34, 52, 41]
+            }],
+            chart: {
+                height: 350,
+                type: 'area',
+                'foreColor': '#fff'  /*to jest  przez nas ystawiony biały kolor dla liczb na wykresie */
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            xaxis: {
+                type: 'datetime',
+                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z",
+                    "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z",
+                    "2018-09-19T06:30:00.000Z"
+                ]
+            },
+            tooltip: {
+                x: {
+                    format: 'dd/MM/yy HH:mm'
+                },
+            },
+
+            /*legend: { wykasowanie legendy z dołu wykresu 
+                show: false
+            } */
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+</body>
+
+</html>

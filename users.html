@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diamond CMS</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0ec460f632.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="panel">
+        <div class="row m-0 h-100">
+            <div class="col-2 p-0 px-4 panel-left">
+                <section class="date-box">
+                    <p class="day mb-0">Środa</p>
+                    <p class="time mb-0">12:00</p>
+                    <p class="date mb-0 text-muted">21/02/2021</p>
+                </section>
+                <section class="menu text-center">
+                    <a href="index.html">
+                        <div class="menu-item">
+                            <i class="fas fa-sliders-h"></i>
+                            <p>strona główna</p>
+                        </div>
+                    </a>
+                    <a href="posts.html">
+                        <div class="menu-item">
+                            <i class="far fa-comments"></i>
+                            <p>posty</p>
+                        </div>
+                    </a>
+                    <a href="#" class="active">
+                        <div class="menu-item">
+                            <i class="fas fa-user-friends"></i>
+                            <p>użytkownicy</p>
+                        </div>
+                    </a>
+                </section>
+                <section class="info-box text-light text-center mt-3">
+                    <h3>Diamond CMS</h3>
+                    <p class="text-muted">&copy; Copyright 2021</p>
+                </section>
+            </div>
+
+            <div class="col-10 p-0 panel-right">
+
+                <section class="info-top my-4 pt-5 text-light text-center">
+                    <h1>użytkownicy</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sed illum cumque.</p>
+                </section>
+
+                <div class="row m-0">
+
+                    <div class="col-8">
+
+                        <section class="users-list py-5 pl-5">
+                            <ul class="list-group">
+                                <!-- klasa Bootstrapowa tak jak poniższa klasa list-group-item!!!!!!!!!!!!!!-->
+
+
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    <!-- to jest jeden użytkownik ze swoim buttonem ponizej i wklejonymi klasami jak z poprzedniej strony dot mpdala !!!!!!!!!!!! i to  kopiujemy np 11 razy  i mamy listę użytkowników. -->
+                                    Jan Kowalski
+                                    <button class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter"> Edytuj profil</button>
+                                </li>
+
+
+
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Anna Nowak
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Janusz
+                                    Nosacz
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Tolek
+                                    Banan
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Mieczysław Pompa
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Andżelina Dżoli
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Matylda Słoneczna
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Jerzy Dudek
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Adam Małysz
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Robert Kubica
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                                <li class="list-group-item bg-transparent text-light d-flex justify-content-between">
+                                    Elżbieta Druga
+                                    <button type="button" class="btn btn-outline-light" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
+                                        Edytuj profil
+                                    </button>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- tu pod sekcją użytkowników wklejamy paginację z pierwszej strony -->
+                        <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+
+                    <div class="col-4 p-5 text-light user-search">
+                        <!-- Tu dajemy prawą czesc widoku  z naszą klasąuser-search a wewnątrz sekcja z logo i poniżej  form  z danymi  formularza -->
+                        <section class="logo py-4 text-center">
+                            <p class="logo-text"><i class="far fa-gem"></i> Diamond Search</p>
+                        </section>
+
+                        <form>
+                            <!--pięć razy etykiety i inputy formularza a każdy w oddzialnym divie!!!!!!!!-->
+                            <div class="form-group">
+                                <!-- klasa Boota !!!!!!!!-->
+                                <label>Nazwa użytkownika:</label>
+                                <input class="form-control"><!-- tez kalsa Boota!!!!!!-->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Adres mailowy:</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Adres IP:</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Imię i nazwisko:</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Poziom konta:</label>
+                                <select class="form-control">
+                                    <!-- klasa Boota!!!!!!!!!-->
+                                    <option selected>- wybierz poziom konta -</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+
+                            </div>
+                        </form>
+
+                        <!-- a pod form  dajemy osobno2 przyciski w jednym divie !!!!!!!!!! -->
+
+                        <div class="search-controls mt-5 row justify-content-end">
+                            <!-- te przyciski sa wyrównane do prawej krawędzi w jednym rzedzie  i dlatego jest row justify-content-end !!!!!!!!!!!!!!!!!!!! -->
+                            <button class="btn btn-outline-light px-4 py-3">Szukaj</button>
+                            <button class="btn btn-outline-light px-4 py-3 mx-4">Wyczyść</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- modal jak to modal dajemy po za widokiem na dole tuż przed  liniami z jsem.  -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="col p-5">
+                    <!-- wszystko w jednej kolumnie !!!!! -->
+                    <div class="card-body">
+                        <!-- oczywiście card-body a w nim h3  i formularze !!!!!!!-->
+                        <h3 class="card-title">Ustawienia profilu:</h3>
+
+                        <form>
+                            <div class="form-group">
+                                <label>Nazwa użytkownika:</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Hasło:</label>
+                                <input type="password" class="form-control">
+                                <!--to test klasa HTML dla wykropkowwania hasła !!!!!!-->
+                            </div>
+
+                            <div class="form-group">
+                                <label>Adres mailowy:</label>
+                                <input class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Poziom konta:</label>
+                                <select class="form-control">
+                                    <option selected>- wybierz poziom konta -</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+
+                            <p class="newsletter pt-4">Newsletter:</p>
+
+                            <div class="form-check form-check-inline">
+                                <!--a to jest skopowane z Boota check ox / inline ( wszystkie formularze do tej strony są z tego samego  miejsca w Bootstrapie !!!!!!! )-->
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1" checked>
+                                <label class="form-check-label" for="inlineRadio1">Tak</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Nie</label>
+                            </div>
+
+
+                            <div class="form-gruop form-check pt-5">
+                                <input type="checkbox" class="form-check-input">
+                                <label class="form-check-label">Zablokuj konto</label>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary px-4 py-3" data-dismiss="modal">Zamknij</button>
+                    <button type="button" class="btn btn-primary px-4 py-3">Zapisz zmiany</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
